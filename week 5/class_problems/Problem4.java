@@ -1,0 +1,8 @@
+/**
+ * Week 5 - Class Problem 4
+ */
+public class Problem4 {
+    public static void main(String[] args) {
+        System.out.println("Week 5 Class Problem 4 Solution");
+    }
+}
