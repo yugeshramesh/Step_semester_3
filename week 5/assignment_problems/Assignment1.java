@@ -1,8 +1,0 @@
-/**
- * Week 5 - Assignment Problem 1
- */
-public class Assignment1 {
-    public static void main(String[] args) {
-        System.out.println("Week 5 Assignment Problem 1 Solution");
-    }
-}
