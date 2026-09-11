@@ -1,12 +1,3 @@
-/**
- * Assignment Problem 2: Word Reversal Encoder
- * Scenario: Coding Club "Mirror Text" Mini-Game
- * 
- * Task:
- * - Accept a sentence with words separated by single spaces.
- * - Reverse each word individually using StringBuilder.
- * - Join reversed words with spaces and return result.
- */
 public class WordReversalEncoder {
 
     public static String reverseEachWord(String sentence) {
@@ -32,6 +23,6 @@ public class WordReversalEncoder {
         String input = "hello club";
         String output = reverseEachWord(input);
         System.out.println("Input: \"" + input + "\" -> Output: \"" + output + "\"");
-        // Output: olleh bulc
+
     }
 }

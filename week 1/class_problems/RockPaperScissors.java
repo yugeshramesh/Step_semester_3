@@ -1,19 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Problem 1: Rock-Paper-Scissors Game
- * Scenario: The College Coding Arcade
- * 
- * Task:
- * - Generate computer move randomly (Rock, Paper, or Scissors).
- * - Accept player move.
- * - Determine round outcome using standard rules.
- * - Play 5 rounds and display summary table and statistics (Win %).
- */
 public class RockPaperScissors {
 
-    // Determines the result of a single round
     public static String playRound(String playerMove, String computerMove) {
         if (playerMove.equalsIgnoreCase(computerMove)) {
             return "Draw";
@@ -43,7 +32,6 @@ public class RockPaperScissors {
         int losses = 0;
         int draws = 0;
 
-        // Predefined demo moves or interactive input
         String[] demoPlayerMoves = {"Rock", "Paper", "Scissors", "Rock", "Paper"};
 
         System.out.println("=== Starting 5-Round Rock-Paper-Scissors Game ===");
@@ -69,7 +57,6 @@ public class RockPaperScissors {
             System.out.println("Round " + (i + 1) + " — Player: " + playerMove + ", Computer: " + computerMove + " -> " + result);
         }
 
-        // Display Final Summary Table
         System.out.println("\n================ FINAL SUMMARY ================");
         System.out.println("Round\tPlayer Move\tComputer Move\tResult");
         System.out.println("-----------------------------------------------");

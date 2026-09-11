@@ -1,12 +1,3 @@
-/**
- * Assignment Problem 5: The Movie Review Word Length Profiler
- * Scenario: Movie-Review Content Moderation
- * 
- * Task:
- * - Split review into words.
- * - Categorize: Short (1-4 letters), Medium (5-8 letters), Long (9+ letters).
- * - Print counts for Short, Medium, and Long words.
- */
 public class MovieReviewWordLengthProfiler {
 
     public static void classifyWordLengths(String review) {
@@ -15,7 +6,6 @@ public class MovieReviewWordLengthProfiler {
             return;
         }
 
-        // Clean extra punctuation and split by whitespace
         String[] words = review.replaceAll("[^a-zA-Z0-9\\s]", "").trim().split("\\s+");
 
         int shortWords = 0;
@@ -39,6 +29,6 @@ public class MovieReviewWordLengthProfiler {
     public static void main(String[] args) {
         String review = "This movie was absolutely fantastic and thrilling";
         classifyWordLengths(review);
-        // Output: Short: 3 | Medium: 1 | Long: 3
+
     }
 }

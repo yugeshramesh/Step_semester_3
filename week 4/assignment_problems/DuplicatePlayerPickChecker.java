@@ -1,9 +1,3 @@
-/**
- * Assignment Problem 2: Duplicate Player Pick Checker
- * 
- * Scenario:
- * Checks a submitted lineup for repeated player names using plain nested loops.
- */
 public class DuplicatePlayerPickChecker {
 
     public static String findDuplicatePick(String[] playerNames) {
@@ -21,9 +15,9 @@ public class DuplicatePlayerPickChecker {
 
     public static void main(String[] args) {
         String[] lineup1 = {"Kohli", "Bumrah", "Kohli", "Rohit"};
-        System.out.println(findDuplicatePick(lineup1)); // Output: Duplicate Found: Kohli
+        System.out.println(findDuplicatePick(lineup1));
 
         String[] lineup2 = {"Kohli", "Bumrah", "Rohit"};
-        System.out.println(findDuplicatePick(lineup2)); // Output: No Duplicates Found
+        System.out.println(findDuplicatePick(lineup2));
     }
 }

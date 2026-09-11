@@ -1,12 +1,5 @@
 import java.util.Arrays;
 
-/**
- * Week 5 - Class Problem 3 (Intermediate): Top-3 Podium Finder
- * 
- * Scenario:
- * Find top 3 scores in a single pass without sorting the array.
- * Return three scores in descending order.
- */
 public class TopThreePodiumFinder {
 
     public static int[] findTopThreeScores(int[] scores) {
@@ -37,6 +30,6 @@ public class TopThreePodiumFinder {
     public static void main(String[] args) {
         int[] scores = {45, 82, 79, 90, 33, 90, 61};
         int[] top3 = findTopThreeScores(scores);
-        System.out.println(Arrays.toString(top3)); // Output: [90, 90, 82]
+        System.out.println(Arrays.toString(top3));
     }
 }

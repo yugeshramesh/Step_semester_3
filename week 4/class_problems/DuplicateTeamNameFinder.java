@@ -1,10 +1,3 @@
-/**
- * Problem 2 (Easy): Duplicate Team Name Finder
- * 
- * Scenario:
- * Hackathon organizers suspect a team submitted their name twice under different entries.
- * Compare every name against every subsequent name using plain nested loops (no Collections).
- */
 public class DuplicateTeamNameFinder {
 
     public static String findDuplicateTeam(String[] teamNames) {
@@ -22,9 +15,9 @@ public class DuplicateTeamNameFinder {
 
     public static void main(String[] args) {
         String[] teamList1 = {"ByteForce", "CodeCrafters", "ByteForce"};
-        System.out.println(findDuplicateTeam(teamList1)); // Output: Duplicate Found: ByteForce
+        System.out.println(findDuplicateTeam(teamList1));
 
         String[] teamList2 = {"ByteForce", "CodeCrafters", "NullPointers"};
-        System.out.println(findDuplicateTeam(teamList2)); // Output: No Duplicates Found
+        System.out.println(findDuplicateTeam(teamList2));
     }
 }

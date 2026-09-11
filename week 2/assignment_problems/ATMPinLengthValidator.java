@@ -1,12 +1,3 @@
-/**
- * Assignment Problem 1: ATM PIN Length Validator
- * Scenario: ATM Application Input Validation
- * 
- * Task:
- * - Accept PIN string.
- * - If length is not 4, print "Invalid PIN — must be exactly 4 digits."
- * - Otherwise, print "PIN length OK."
- */
 public class ATMPinLengthValidator {
 
     public static void checkPinLength(String pin) {
@@ -18,7 +9,7 @@ public class ATMPinLengthValidator {
     }
 
     public static void main(String[] args) {
-        checkPinLength("482");  // Output: Invalid PIN — must be exactly 4 digits.
-        checkPinLength("4820"); // Output: PIN length OK.
+        checkPinLength("482");
+        checkPinLength("4820");
     }
 }

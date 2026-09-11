@@ -1,16 +1,5 @@
-/**
- * Problem 2: Palindrome Checker (3 Approaches)
- * Scenario: The QA Text Verification Toolkit
- * 
- * Task:
- * - Implement iterative check (two-pointer inward scan)
- * - Implement recursive check (first and last char comparison)
- * - Implement array-reversal check (char array reversal)
- * - Confirm all three approaches agree on the result.
- */
 public class PalindromeChecker {
 
-    // Approach 1: Iterative two-pointer check
     public static boolean isPalindromeIterative(String text) {
         if (text == null) return false;
         int left = 0;
@@ -26,7 +15,6 @@ public class PalindromeChecker {
         return true;
     }
 
-    // Approach 2: Recursive check
     public static boolean isPalindromeRecursive(String text) {
         if (text == null) return false;
         if (text.length() <= 1) return true;
@@ -35,11 +23,9 @@ public class PalindromeChecker {
             return false;
         }
 
-        // Recursive call with substring excluding first and last characters
         return isPalindromeRecursive(text.substring(1, text.length() - 1));
     }
 
-    // Approach 3: Character Array Reversal check
     public static boolean isPalindromeArrayReversal(String text) {
         if (text == null) return false;
 
@@ -53,7 +39,6 @@ public class PalindromeChecker {
         return String.valueOf(original).equals(String.valueOf(reversed));
     }
 
-    // Formatter helper
     public static String formatResult(boolean isPal) {
         return isPal ? "Palindrome" : "Not Palindrome";
     }
@@ -64,8 +49,8 @@ public class PalindromeChecker {
         boolean arrRev = isPalindromeArrayReversal(text);
 
         System.out.println("Input: \"" + text + "\"");
-        System.out.println("Iterative: " + formatResult(iter) + 
-                           " | Recursive: " + formatResult(recur) + 
+        System.out.println("Iterative: " + formatResult(iter) +
+                           " | Recursive: " + formatResult(recur) +
                            " | Array Reversal: " + formatResult(arrRev));
         System.out.println();
     }

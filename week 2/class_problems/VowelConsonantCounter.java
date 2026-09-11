@@ -1,12 +1,3 @@
-/**
- * Problem 1: Vowel & Consonant Counter
- * Scenario: Library Orientation Kiosk
- * 
- * Task:
- * - Loop through character by character using charAt().
- * - Count vowels (a, e, i, o, u) case-insensitively and consonants; ignore spaces.
- * - Print total vowels and consonants.
- */
 public class VowelConsonantCounter {
 
     public static void countVowelsAndConsonants(String text) {
@@ -37,6 +28,6 @@ public class VowelConsonantCounter {
     public static void main(String[] args) {
         String input = "Java Programming";
         System.out.print("Input: \"" + input + "\" -> ");
-        countVowelsAndConsonants(input); // Output: Vowels: 5 | Consonants: 10
+        countVowelsAndConsonants(input);
     }
 }

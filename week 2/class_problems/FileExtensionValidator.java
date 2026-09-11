@@ -1,12 +1,3 @@
-/**
- * Problem 3: File Extension Validator
- * Scenario: Assignment-Upload Portal
- * 
- * Task:
- * - Extract extension using lastIndexOf('.') and substring().
- * - Validate against accepted extensions (pdf, docx, zip) case-insensitively.
- * - Return "Accepted" or "Rejected — invalid file type".
- */
 public class FileExtensionValidator {
 
     public static String validateFileExtension(String filename) {
@@ -25,7 +16,7 @@ public class FileExtensionValidator {
     }
 
     public static void main(String[] args) {
-        System.out.println(validateFileExtension("Assignment1.PDF")); // Output: Accepted
-        System.out.println(validateFileExtension("notes.txt"));       // Output: Rejected — invalid file type
+        System.out.println(validateFileExtension("Assignment1.PDF"));
+        System.out.println(validateFileExtension("notes.txt"));
     }
 }

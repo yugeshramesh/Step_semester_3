@@ -1,15 +1,5 @@
-/**
- * Problem 5: Reverse Customer Name
- * Scenario: The Customer Identity Verification System
- * 
- * Task:
- * - Accept customerName and reverse character sequence without modifying original.
- * - Return reversed string.
- * - Print both original and reversed names in main.
- */
 public class ReverseCustomerName {
 
-    // Reverses a given customer name string
     public static String reverseCustomerName(String customerName) {
         if (customerName == null) {
             return null;
@@ -36,8 +26,6 @@ public class ReverseCustomerName {
 
         System.out.println("Original Name: " + originalName);
         System.out.println("Reversed Name: " + reversedName);
-        // Output:
-        // Original Name: Sunil
-        // Reversed Name: linuS
+
     }
 }

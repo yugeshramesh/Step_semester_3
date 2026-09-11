@@ -1,13 +1,5 @@
-/**
- * Week 5 - Class Problem 4 (Intermediate): Hackathon Seating Grid Optimizer
- * 
- * Scenario:
- * Grid of seating rows (can be jagged). Classify each row as "Quiet Zone" (< threshold)
- * or "Buzzing Zone" (>= threshold) using a reusable rowAverage helper.
- */
 public class HackathonSeatingGridOptimizer {
 
-    // Helper method to compute average of a single row
     public static double rowAverage(int[] row) {
         if (row == null || row.length == 0) {
             return 0.0;
@@ -19,7 +11,6 @@ public class HackathonSeatingGridOptimizer {
         return sum / row.length;
     }
 
-    // Classifies each row
     public static String classifyRows(int[][] seatingScores, int threshold) {
         if (seatingScores == null || seatingScores.length == 0) {
             return "";
@@ -49,6 +40,6 @@ public class HackathonSeatingGridOptimizer {
 
         String result = classifyRows(seatingScores, threshold);
         System.out.println(result);
-        // Output: Row 0: Quiet Zone | Row 1: Buzzing Zone | Row 2: Quiet Zone
+
     }
 }

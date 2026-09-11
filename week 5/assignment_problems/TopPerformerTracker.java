@@ -1,9 +1,3 @@
-/**
- * Week 5 - Assignment Problem 3: Top Performer Tracker
- * 
- * Scenario:
- * Single-pass min/max tracking to report minimum, maximum, and spread without sorting.
- */
 public class TopPerformerTracker {
 
     public static String findMinMaxSpread(int[] scores) {
@@ -30,6 +24,6 @@ public class TopPerformerTracker {
     public static void main(String[] args) {
         int[] scores = {45, 82, 79, 90, 33, 90, 61};
         System.out.println(findMinMaxSpread(scores));
-        // Output: Min: 33 | Max: 90 | Spread: 57
+
     }
 }

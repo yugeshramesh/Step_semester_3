@@ -2,15 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Problem 5 (Advanced): Placement Drive Shortlisting & Ranking Engine
- * 
- * Scenario:
- * - Overloaded isEligible(...) methods:
- *     - CGPA only (cgpa >= 7.5)
- *     - CGPA + coding score (cgpa >= 6.5 && codingScore >= 60)
- * - Candidate implements Comparable<Candidate> for Arrays.sort by composite score descending.
- */
 class Candidate implements Comparable<Candidate> {
     private String name;
     private double cgpa;
@@ -40,17 +31,14 @@ class Candidate implements Comparable<Candidate> {
         return compositeScore;
     }
 
-    // CGPA-only filter
     public static boolean isEligible(double cgpa) {
         return cgpa >= 7.5;
     }
 
-    // Combined filter
     public static boolean isEligible(double cgpa, int codingScore) {
         return cgpa >= 6.5 && codingScore >= 60;
     }
 
-    // Sort descending by composite score
     @Override
     public int compareTo(Candidate other) {
         return Double.compare(other.compositeScore, this.compositeScore);
@@ -99,6 +87,6 @@ public class PlacementDriveRankingEngine {
 
         String result = shortlistAndRank(candidates);
         System.out.println(result);
-        // Output: 1. Aisha (102.0) | 2. Rohit (100.5) | 3. Karan (85.0)
+
     }
 }

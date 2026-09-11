@@ -1,13 +1,3 @@
-/**
- * Assignment Problem 4: Library ISBN Normalizer & Validator
- * Scenario: Library Book-Intake Scanner
- * 
- * Task:
- * - Normalize: trim spaces, uppercase first 3 characters using substring().
- * - Validate: 13 chars total, first 3 letters, remaining 10 digits (no regex).
- * - Format: "[PUBCODE] YEAR: 20XX | CATALOG: 123456"
- * - Output specific error reasons if invalid.
- */
 public class LibraryISBNNormalizer {
 
     public static String normalizeCode(String raw) {
@@ -24,14 +14,12 @@ public class LibraryISBNNormalizer {
             return "Invalid: wrong length";
         }
 
-        // Validate first 3 characters are letters
         for (int i = 0; i < 3; i++) {
             if (!Character.isLetter(code.charAt(i))) {
                 return "Invalid: publisher code must be 3 letters";
             }
         }
 
-        // Validate remaining 10 characters are digits
         for (int i = 3; i < 13; i++) {
             if (!Character.isDigit(code.charAt(i))) {
                 return "Invalid: non-digit body";
@@ -51,12 +39,11 @@ public class LibraryISBNNormalizer {
     public static void main(String[] args) {
         String test1 = " pen2026004251 ";
         String norm1 = normalizeCode(test1);
-        System.out.println(validateAndFormat(norm1)); 
-        // Output: [PEN] YEAR: 2026 | CATALOG: 004251
+        System.out.println(validateAndFormat(norm1));
 
         String test2 = "12N2026004251";
         String norm2 = normalizeCode(test2);
-        System.out.println(validateAndFormat(norm2)); 
-        // Output: Invalid: publisher code must be 3 letters
+        System.out.println(validateAndFormat(norm2));
+
     }
 }

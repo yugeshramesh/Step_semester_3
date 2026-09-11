@@ -2,13 +2,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Assignment Problem 5: Fantasy League Auto-Draft Ranking Engine
- * 
- * Scenario:
- * - Overloaded isDraftable(...) checks.
- * - Player implements Comparable<Player> for Arrays.sort by battingAverage descending.
- */
 class Player implements Comparable<Player> {
     private String name;
     private int matchesPlayed;
@@ -38,17 +31,14 @@ class Player implements Comparable<Player> {
         return injured;
     }
 
-    // Matches-played-only rule (>= 10 matches)
     public static boolean isDraftable(int matchesPlayed) {
         return matchesPlayed >= 10;
     }
 
-    // Combined matches-and-fitness rule (>= 5 matches and not injured)
     public static boolean isDraftable(int matchesPlayed, boolean injured) {
         return matchesPlayed >= 5 && !injured;
     }
 
-    // Rank by batting average descending
     @Override
     public int compareTo(Player other) {
         return Double.compare(other.battingAverage, this.battingAverage);
@@ -93,6 +83,6 @@ public class FantasyLeagueAutoDraftRankingEngine {
 
         String result = draftAndRank(players);
         System.out.println(result);
-        // Output: 1. Rahul | 2. Virat | 3. Dev
+
     }
 }

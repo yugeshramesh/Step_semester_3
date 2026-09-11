@@ -1,12 +1,3 @@
-/**
- * Assignment Problem 2: The Typing Speed Test Accuracy Checker
- * Scenario: Online Typing Practice Website
- * 
- * Task:
- * - Compare original and typed strings character by character.
- * - Calculate accuracy percentage: (matched / total) * 100.
- * - Report accuracy and 1-based position of first mismatch (if any).
- */
 public class TypingSpeedAccuracyChecker {
 
     public static void checkTypingAccuracy(String original, String typed) {
@@ -30,7 +21,7 @@ public class TypingSpeedAccuracyChecker {
             if (origChar == typedChar) {
                 matched++;
             } else if (firstMismatchPos == -1) {
-                firstMismatchPos = i + 1; // 1-based position
+                firstMismatchPos = i + 1;
                 origMismatchChar = origChar;
                 typedMismatchChar = typedChar;
             }
@@ -54,9 +45,8 @@ public class TypingSpeedAccuracyChecker {
 
     public static void main(String[] args) {
         checkTypingAccuracy("hello world", "hello worlt");
-        // Output: Matched: 10/11 | Accuracy: 90.91% | First Mismatch at position 11 ('d' vs 't')
 
         checkTypingAccuracy("coding", "coding");
-        // Output: Matched: 6/6 | Accuracy: 100.00% | No Mismatches
+
     }
 }
